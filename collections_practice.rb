@@ -95,13 +95,7 @@ def merge_data(keys, data)
   array = []
   data.each do |object|
     object.each do |key, value|
-      keys.each do |obj|
-        obj.each do |k, v|
-          if v == key 
-            array.push(value.merge!(object))
-          end
-        end
-      end
+      array.push(value)  
     end
   end
   array
