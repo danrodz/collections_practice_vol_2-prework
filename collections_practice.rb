@@ -63,11 +63,9 @@ def merge_data(keys, data)
 end
 
 def find_cool(array)
-  array.map do |hash|
-    hash.each do |k, v|
-      if 
-    end
-  end
+  array.map do |obj|
+    obj[:temperature] == "cool" ? obj : nil
+  end.compact!
 end
 
 
