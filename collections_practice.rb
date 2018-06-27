@@ -72,9 +72,14 @@ def organize_schools(schools)
   organized_schools = {}
   schools.each do |school, value|
     school.each do |location, city|
-      
+      if !organized_schools.has_key?(city)
+        organized_schools[city] = [school]
+      else
+        organized_schools[city] << school
+      end
     end
   end
+  organized_schools
 end
 
 # let(:schools) {
