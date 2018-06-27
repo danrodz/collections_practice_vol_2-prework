@@ -99,6 +99,7 @@ def merge_data(keys, data)
         obj.each do |k, v|
           if key == obj[:first_name]
             array.push(value.merge(obj))
+          end
         end
       end
     end
