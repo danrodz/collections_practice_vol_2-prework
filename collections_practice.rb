@@ -70,44 +70,19 @@ end
 
 def organize_schools(schools)
   organized_schools = {}
-  schools.each do |school, value|
-    city = school[:location]
-    if !organized_schools.has_key?(city)
-      organized_schools[city] = [school]
+  schools.each do |name, location_hash|
+    location = location_hash[:location]
+    if organized_schools[location]
+      organized_schools[location] << name
     else
-      organized_schools[city] << school
+      organized_schools[location] = []
+      organized_schools[location] << name
     end
   end
   organized_schools
 end
 
-# let(:schools) {
-#     {
-#       "flatiron school bk" => {
-#         :location => "NYC"
-#       },
-#       "flatiron school" => {
-#         :location => "NYC"
-#       },
-#       "dev boot camp" => {
-#         :location => "SF"
-#       },
-#       "dev boot camp chicago" => {
-#         :location => "Chicago"
-#       },
-#       "general assembly" => {
-#         :location => "NYC"
-#       },
-#       "Hack Reactor" => {
-#         :location => "SF"
-#       }
-#     }
-#   }
-#   let(:organized_schools) {
-#     {"NYC"=>["flatiron school bk", "flatiron school", "general assembly"],
-#     "SF"=>["dev boot camp", "Hack Reactor"],
-#     "Chicago"=>["dev boot camp chicago"]}
-#   }
+
 
 
 
