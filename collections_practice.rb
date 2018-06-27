@@ -68,11 +68,42 @@ def find_cool(array)
   end.compact!
 end
 
-def organize_schools
-
+def organize_schools(schools)
+  organized_schools = {}
+  schools.each do |school, value|
+    school.each do |location, city|
+      
+    end
+  end
 end
 
-
+# let(:schools) {
+#     {
+#       "flatiron school bk" => {
+#         :location => "NYC"
+#       },
+#       "flatiron school" => {
+#         :location => "NYC"
+#       },
+#       "dev boot camp" => {
+#         :location => "SF"
+#       },
+#       "dev boot camp chicago" => {
+#         :location => "Chicago"
+#       },
+#       "general assembly" => {
+#         :location => "NYC"
+#       },
+#       "Hack Reactor" => {
+#         :location => "SF"
+#       }
+#     }
+#   }
+#   let(:organized_schools) {
+#     {"NYC"=>["flatiron school bk", "flatiron school", "general assembly"],
+#     "SF"=>["dev boot camp", "Hack Reactor"],
+#     "Chicago"=>["dev boot camp chicago"]}
+#   }
 
 
 
