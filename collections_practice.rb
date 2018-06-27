@@ -72,12 +72,9 @@ def organize_schools(schools)
   organized_schools = {}
   schools.each do |school, hash|
     location = hash[:location]
-    if organized_schools[location]
-      organized_schools[location] << name
-    else
-      organized_schools[location] = []
-      organized_schools[location] << name
-    end
+    organized_schools.has_key?(location) ?
+    organized_schools[location] << school :
+    organized_schools[location] = [school]
   end
   organized_schools
 end
