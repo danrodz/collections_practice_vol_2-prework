@@ -68,6 +68,10 @@ def find_cool(array)
   end.compact!
 end
 
+def organize_schools
+
+end
+
 
 
 
