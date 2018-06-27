@@ -71,6 +71,7 @@ end
 def organize_schools(schools)
   organized_schools = {}
   schools.each do |school, value|
+    city = school[:location]
     if !organized_schools.has_key?(city)
       organized_schools[city] = [school]
     else
